@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "GothamRounded";
+  src: url("/fonts/GothamRounded/GothamRounded-Bold.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+html {
+  min-height: 100%;
+  /* overflow: hidden; */
+}
+
+body {
+  min-height: 100%;
+  /* overflow: auto; */
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-textsize-adjust: 100%;
+  font-feature-settings: kern;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  @apply bg-[url("/bg.jpg")] text-white bg-cover;
+}
+
+#__next {
+  height: 100%;
+}
+
+.bgblur {
+  @apply backdrop-blur-lg overflow-hidden backdrop-filter;
+}
+
+details {
+  @apply flex flex-col cursor-pointer py-10;
+}
+
+details > summary {
+  @apply list-none;
+}
+details > summary + div {
+  @apply mt-6;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-number-input input:focus {
+  outline: none !important;
+}
+
+.custom-number-input button:focus {
+  outline: none !important;
+}
